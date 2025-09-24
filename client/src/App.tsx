@@ -1,12 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+
+import Navigation from "./pages/Navigation"
+
+
 
 function App() {
 
   return (
     <>
-      <h2 className='text-2xl text-blue-500'>Hello World</h2>
+      <Navigation />
     </>
   )
 }
