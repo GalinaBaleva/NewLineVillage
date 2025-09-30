@@ -1,4 +1,4 @@
-// import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home"
 import Navigation from "./pages/Navigation"
@@ -9,9 +9,14 @@ function App() {
 
   return (
     <>
+      <BrowserRouter>
         <Navigation />
-        <Home />
-
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
 
     </>
   )
