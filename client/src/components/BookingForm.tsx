@@ -1,7 +1,7 @@
 const BookingForm = () => {
 
     return (
-        <form className=' bg-white text-gray-500 rounded-lg px-6 py-4  flex flex-col md:flex-row max-md:items-start gap-4 max-md:mx-auto shadow-[0_1em_1em_0_rgba(0,0,0,0.2)]'>
+        <form className='w-[90%] absolute -bottom-18 bg-white text-gray-500 rounded-lg px-6 py-4 flex flex-col md:-bottom-10 md:flex-row flex-wrap max-md:items-start gap-4 max-md:mx-auto shadow-[0_1em_1em_0_rgba(0,0,0,0.2)]'>
             <div>
                 <div className='flex items-center gap-2'>
                     <svg className="w-4 h-4 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" >

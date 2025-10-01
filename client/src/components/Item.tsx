@@ -15,7 +15,7 @@ const Item = (props: Apartment) => {
 
         <div className="border border-gray-500/20 rounded-md md:px-4 px-3 py-2 bg-white min-w-56 max-w-56 w-full">
             <div className="group cursor-pointer flex items-center justify-center px-2">
-                <img className="group-hover:scale-105 transition max-w-26 md:max-w-36" src={props.name} alt={props.name} />
+                <img className="group-hover:scale-105 transition max-w-26 md:max-w-36" src={props.image} alt={props.name} />
             </div>
             <div className="text-gray-500/60 text-sm">
                 <p>{props.name}</p>

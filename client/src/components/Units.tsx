@@ -70,7 +70,7 @@ const Units = () => {
 
     return (
         <section className="w-full py-8 px-10 flex flex-col gap-6">
-            <h2 className="text-center text-3xl text-orange-400 font-dancing">Available Apartments</h2>
+            <h2 className="text-center text-3xl text-orange-400 font-dancing font-[Dancing_Script]">Available Apartments</h2>
             <div className="flex justify-center gap-1 flex-wrap">
                 {Object.values(typeApartments).map((apartment: Apartment) => <Item key={apartment.name} {...apartment} />)}
             </div>
