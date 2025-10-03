@@ -13,9 +13,9 @@ const Item = (props: Apartment) => {
     const [count, setCount] = useState(0);
     return (
 
-        <div className="border border-gray-500/20 rounded-md md:px-4 px-3 py-2 bg-white min-w-56 max-w-56 w-full">
-            <div className="group cursor-pointer flex items-center justify-center px-2">
-                <img className="group-hover:scale-105 transition max-w-26 md:max-w-36" src={props.image} alt={props.name} />
+        <div className="border border-gray-300 rounded-lg bg-white p-4 shadow-md w-full max-w-[320px]">
+            <div className="flex items-center justify-center">
+                <img className="w-full h-48 object-cover rounded-md" src={props.image} alt={props.name} />
             </div>
             <div className="text-gray-500/60 text-sm">
                 <p>{props.name}</p>
