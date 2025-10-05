@@ -71,11 +71,9 @@ const Units = () => {
     return (
         <section className="w-full py-8 px-10 md:px-40 flex flex-col gap-6 m-auto">
             <h2 className="text-center text-3xl md:text-6xl text-orange-400 font-dancing font-[Dancing_Script]">Available Apartments</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 justify-items-center">
+            <div className="flex flex-col justify-center items-center gap-6">
                 {Object.values(typeApartments).map((apartment: Apartment) => <Item key={apartment.name} {...apartment} />)}
             </div>
-
-
         </section>
     )
 }

@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 interface Apartment {
-        image: string;
-        name: string;
-        guests: number;
-        numberOfBeds: number;
-        typeOfBed: [string, string?, string?];
-        rating: number;
-    }
+    image: string;
+    name: string;
+    guests: number;
+    numberOfBeds: number;
+    typeOfBed: [string, string?, string?];
+    rating: number;
+}
 
 const Item = (props: Apartment) => {
     const [count, setCount] = useState(0);
@@ -17,8 +17,8 @@ const Item = (props: Apartment) => {
             <div className="flex items-center justify-center">
                 <img className="w-full h-48 object-cover rounded-md" src={props.image} alt={props.name} />
             </div>
-            <div className="text-gray-500/60 text-sm">
-                <p>{props.name}</p>
+            <div className="text-gray-500/60 text-sm flex flex-col gap-1">
+                <p>{props.numberOfBeds} {props.typeOfBed[0]}</p>
                 <p className="text-gray-700 font-medium text-lg truncate w-full">{props.name}</p>
                 <div className="flex items-center gap-0.5">
                     {Array(5).fill('').map((_, i) => (
@@ -34,30 +34,11 @@ const Item = (props: Apartment) => {
                     ))}
                     <p>({props.rating})</p>
                 </div>
-                <div className="flex items-end justify-between mt-3">
-                    <p className="md:text-xl text-base font-medium text-indigo-500">
-                        ${props.rating} <span className="text-gray-500/60 md:text-sm text-xs line-through">${props.rating}</span>
-                    </p>
-                    <div className="text-indigo-500">
-                        {count === 0 ? (
-                            <button className="flex items-center justify-center gap-1 bg-indigo-100 border border-indigo-300 md:w-[80px] w-[64px] h-[34px] rounded text-indigo-600 font-medium" onClick={() => setCount(1)} >
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M.583.583h2.333l1.564 7.81a1.17 1.17 0 0 0 1.166.94h5.67a1.17 1.17 0 0 0 1.167-.94l.933-4.893H3.5m2.333 8.75a.583.583 0 1 1-1.167 0 .583.583 0 0 1 1.167 0m6.417 0a.583.583 0 1 1-1.167 0 .583.583 0 0 1 1.167 0" stroke="#615fff" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Add
-                            </button>
-                        ) : (
-                            <div className="flex items-center justify-center gap-2 md:w-20 w-16 h-[34px] bg-indigo-500/25 rounded select-none">
-                                <button onClick={() => setCount((prev) => Math.max(prev - 1, 0))} className="cursor-pointer text-md px-2 h-full" >
-                                    -
-                                </button>
-                                <span className="w-5 text-center">{count}</span>
-                                <button onClick={() => setCount((prev) => prev + 1)} className="cursor-pointer text-md px-2 h-full" >
-                                    +
-                                </button>
-                            </div>
-                        )}
-                    </div>
+
+                <div className="text-indigo-500 ">
+                    <button className="bg-indigo-100 border border-indigo-300 w-full md:w-[80px] w-[64px] h-[34px] rounded text-indigo-600 font-medium" onClick={() => setCount(1)} >
+                        Book now
+                    </button>
                 </div>
             </div>
         </div>
