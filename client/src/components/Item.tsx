@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 interface Apartment {
     image: string;
     name: string;
@@ -10,10 +8,9 @@ interface Apartment {
 }
 
 const Item = (props: Apartment) => {
-    const [count, setCount] = useState(0);
     return (
 
-        <div className="border border-gray-300 rounded-lg bg-white p-4 shadow-md w-full max-w-[320px]">
+        <div className="border border-gray-300 rounded-lg bg-white p-4 shadow-md">
             <div className="flex items-center justify-center">
                 <img className="w-full h-48 object-cover rounded-md" src={props.image} alt={props.name} />
             </div>
@@ -36,7 +33,7 @@ const Item = (props: Apartment) => {
                 </div>
 
                 <div className="text-indigo-500 ">
-                    <button className="bg-indigo-100 border border-indigo-300 w-full md:w-[80px] w-[64px] h-[34px] rounded text-indigo-600 font-medium" onClick={() => setCount(1)} >
+                    <button className="bg-indigo-100 border border-indigo-300 w-full md:w-[80px] h-[34px] rounded text-indigo-600 font-medium" >
                         Book now
                     </button>
                 </div>
